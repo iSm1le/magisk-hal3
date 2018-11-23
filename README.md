@@ -1,7 +1,11 @@
 # Magisk Module Template
 
-**Update `README.md` if you want to submit your module to the online repo!** This `README.md` will be shown in a Webview dialog when a user taps your module in Magisk Manager, so make sure to place some information / changelog / notes here.
+[![Developer web site](https://img.shields.io/badge/Developer%20site-xaked.com-blue.svg?longCache=true&style=flat-square)](https://xaked.com/)
 
-If you are not familiar with the Markdown syntax, you can start by experimenting on GitHub's online Markdown editor, which will let you preview before publishing. If you need more help, the [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) will be handy.
+This magisk module enables Camera 2 API support
 
-For more information about modules and repos, please check the [official documentation](https://topjohnwu.github.io/Magisk/)
+## Author
+
+Copyright © **[iSm1le](https://github.com/iSm1le/)**, Released under the [Apache 2.0](https://github.com/iSm1le/magisk-hal3/blob/master/LICENSE) license.
+
+Authored and maintained by [iSm1le](https://github.com/iSm1le)

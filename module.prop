@@ -1,7 +1,7 @@
-id=template
-name=Template Module
+id=HAL3_Enabler
+name=HAL3 enabler
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=iSm1le
+description=Add HAL3 record to your build.prop
 minMagisk=17000

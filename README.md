@@ -1,4 +1,4 @@
-# Magisk Module Template
+# Magisk HAL3 Enabler
 
 [![Developer web site](https://img.shields.io/badge/Developer%20site-xaked.com-blue.svg?longCache=true&style=flat-square)](https://xaked.com/)
 

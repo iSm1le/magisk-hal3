@@ -28,10 +28,10 @@ AUTOMOUNT=true
 PROPFILE=true
 
 # Set to true if you need post-fs-data script
-POSTFSDATA=false
+POSTFSDATA=true
 
 # Set to true if you need late_start service script
-LATESTARTSERVICE=true
+LATESTARTSERVICE=false
 
 ##########################################################################################
 # Installation Message
@@ -42,7 +42,9 @@ LATESTARTSERVICE=true
 print_modname() {
   ui_print "*******************************"
   ui_print "      Magisk HAL3 enabler      "
+  ui_print "              by               "
   ui_print "            iSm1le             "
+  ui_print "     cmp: 28/02/19 -- 11:04    "
   ui_print "*******************************"
 }
 
@@ -86,6 +88,7 @@ set_permissions() {
 
   # The following is default permissions, DO NOT remove
   set_perm_recursive  $MODPATH  0  0  0755  0644
+  set_perm $MODPATH/system/build.prop 0 0 0600
 }
 
 ##########################################################################################
@@ -97,3 +100,29 @@ set_permissions() {
 # update-binary. Refrain from adding code directly into update-binary, as it will make it
 # difficult for you to migrate your modules to newer template versions.
 # Make update-binary as clean as possible, try to only do function calls in it.
+
+update_buildprop() { }
+
+# update_buildprop() {
+#   if [ -f /system/build.prop ]; then
+#     if cat /system/build.prop | grep -q "persist.camera.HAL3.enabled=1"
+#     then
+#       ui_print "persist.camera.HAL3.enabled=1 in build.prop exists..., skipping"
+#       if [ -f $MODPATH/system/build.prop ]; then
+#         ui_print "Removing files from $MODPATH"
+#         rm -rf $MODPATH/system/build.prop
+#       fi
+#     else
+#       if [ -f $MODPATH/system/build.prop ]; then
+#         ui_print "Removing files from $MODPATH"
+#         rm -rf $MODPATH/system/build.prop
+#       fi
+#       ui_print "Adding persist.camera.HAL3.enabled=1 to build.prop"
+#       cp /system/build.prop $MODPATH/system/build.prop
+#       ui_print "persist.camera.HAL3.enabled=1" >> $MODPATH/system/build.prop
+#       ui_print "" >> $MODPATH/system/build.prop
+#     fi
+#   else
+#     echo "/system/build.prop not found..."
+#   fi
+# }

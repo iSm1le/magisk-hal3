@@ -1,7 +1,7 @@
 id=magisk-hal3
 name=HAL3 enabler
-version=v1.1
-versionCode=11
+version=v1.2
+versionCode=12
 author=iSm1le
 description=Add HAL3 record to your build.prop
 minMagisk=17000

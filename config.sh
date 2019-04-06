@@ -101,8 +101,6 @@ set_permissions() {
 # difficult for you to migrate your modules to newer template versions.
 # Make update-binary as clean as possible, try to only do function calls in it.
 
-update_buildprop() { }
-
 # update_buildprop() {
 #   if [ -f /system/build.prop ]; then
 #     if cat /system/build.prop | grep -q "persist.camera.HAL3.enabled=1"
